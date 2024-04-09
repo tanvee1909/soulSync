@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHQ-9 Depression Test Questionnaire</title>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: cursive;
+  }
+  .content {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .questionnaire {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+     font-family: arimo;
+     margin-left: 125px;
+  }
+  .question-container {
+    display: none;
+    margin-bottom: 20px;
+  }
+  .question {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .options-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .option {
+    margin-bottom: 10px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  #logo{
+    width : 45vw;
+    height: 26vh;
+  }
+  .result{
+    background-color : "#c69dc6";
+    font-family: cursive;
+
+  }
+  </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+          <img id = "logo" src="soulsync_logo.png" alt="PHQ-9 Test">
+          <p style = "font-family: 'font-family: arimo;"> Your answers can spark a conversation with a healthcare professional and guide you toward the support you deserve. Remember, taking care of your mental health is a courageous step toward a brighter tomorrow. <br>
+         <p style = "font-size: larger; font-weight: 600;"> Remember you're not alone in this journey !</p>
+        </div>
+<div class="questionnaire">
+  <div class="question-container" id="question1">
+    <div class="question">
+      <p>1 Do you find yourself lacking interest or pleasure in activities? Do you often feel down, depressed, or hopeless?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q1" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q1" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q1" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q1" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question2">
+    <div class="question">
+      <p>Are you experiencing difficulty falling asleep, staying asleep, or oversleeping?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q2" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q2" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q2" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q2" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question3">
+    <div class="question">
+      <p>Do you frequently feel tired or have low energy levels?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q3" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q3" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q3" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q3" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question4">
+    <div class="question">
+      <p>Have you noticed changes in your appetite, either eating too little or overeating?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q4" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q4" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q4" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q4" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question5">
+    <div class="question">
+      <p>Do you frequently feel bad about yourself, or feel like you're a failure or have disappointed yourself or your family?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q5" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q5" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q5" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q5" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question6">
+    <div class="question">
+      <p>Are you having trouble focusing on tasks such as reading or watching television?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q6" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q6" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q6" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q6" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question7">
+    <div class="question">
+      <p>Do you find it difficult to concentrate on tasks like reading the newspaper or watching television?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q7" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q7" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q7" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q7" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question8">
+    <div class="question">
+      <p>Have you observed yourself moving or speaking slowly, to the point where others might notice? Conversely, have you been unusually fidgety or restless, moving around more than usual?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q8" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q8" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q8" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q8" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div class="question-container" id="question9">
+    <div class="question">
+      <p>Do you have thoughts about being better off dead, or thoughts of hurting yourself in any way?</p>
+    </div>
+    <div class="options-container">
+      <label class="option"><input type="radio" name="q9" value="0"> A) Not at all</label>
+      <label class="option"><input type="radio" name="q9" value="1"> B) Several days</label>
+      <label class="option"><input type="radio" name="q9" value="2"> C) More than half the days</label>
+      <label class="option"><input type="radio" name="q9" value="3"> D) Nearly everyday</label>
+    </div>
+    <button class="btn" onclick="nextQuestion()">Next</button>
+  </div>
+  <div id="result"></div> <!-- This div will display the result -->
+</div>
+</div>
+<script>
+    var currentQuestion = 1;
+    var totalQuestions = 9;
+  
+    function nextQuestion() {
+      var selectedOption = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
+      if (!selectedOption) {
+        alert('Please select an option before proceeding.');
+        return;
+      }
+  
+      var currentQuestionElement = document.getElementById('question' + currentQuestion);
+      currentQuestionElement.style.display = 'none';
+      currentQuestion++;
+      if (currentQuestion <= totalQuestions) {
+        var nextQuestionElement = document.getElementById('question' + currentQuestion);
+        nextQuestionElement.style.display = 'block';
+      } else {
+        // Handle end of questions
+        alert('End of questionnaire');
+      }
+    }
+  
+    // Display the first question initially
+    document.getElementById('question1').style.display = 'block';
+  </script>
+  
+ <script>
+  var totalScore = 0;
+
+  function nextQuestion() {
+    var selectedOption = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
+    if (!selectedOption) {
+      alert('Please select an option before proceeding.');
+      return;
+    }
+
+    // Add the score of the selected option to the total score
+    totalScore += parseInt(selectedOption.value);
+
+    var currentQuestionElement = document.getElementById('question' + currentQuestion);
+    currentQuestionElement.style.display = 'none';
+    currentQuestion++;
+    if (currentQuestion <= totalQuestions) {
+      var nextQuestionElement = document.getElementById('question' + currentQuestion);
+      nextQuestionElement.style.display = 'block';
+    } else {
+      // Handle end of questions
+      displayDepressionLevel(totalScore);
+    }
+  }
+
+  function displayDepressionLevel(score) {
+    var depressionLevel = '';
+    if (score >= 1 && score <= 4) {
+      depressionLevel = 'Minimal depression';
+    } else if (score >= 5 && score <= 9) {
+      depressionLevel = 'Mild depression';
+    } else if (score >= 10 && score <= 14) {
+      depressionLevel = 'Moderate depression';
+    } else if (score >= 15 && score <= 19) {
+      depressionLevel = 'Moderately severe depression';
+    } else if (score >= 20 && score <= 27) {
+      depressionLevel = 'Severe depression';
+    }
+
+    var resultElement = document.getElementById('result');
+    resultElement.innerHTML = '<p>Depression Severity: ' + depressionLevel + '</p>';
+    resultElement.innerHTML += '<p>Here are some messages based on your depression level:</p>';
+    switch(depressionLevel) {
+      case 'Minimal depression':
+        resultElement.innerHTML += '<pre class = "result">🌟 Thank you for completing the depression assessment on SoulSync! Your well-being matters to us. Based on your responses, it seems you are experiencing mild depression symptoms. Remember, you are not alone. Seeking support from a mental health professional or loved ones can make a difference. We are here to help along your healing journey. 💖       - The SoulSync Team 🌻</pre> ';
+        break;
+      case 'Mild depression':
+        resultElement.innerHTML += '<pre class = "result ">🌟 Thank you for taking the SoulSync depression assessment! Your well-being is our priority, and we applaud your effort to understand and address your mental health.Based on your responses, it seems you are experiencing minimal depression. It is normal to have ups and downs, and mild symptoms are common.Minimal depression might show as occasional sadness, but it is not significantly affecting your daily life. Remember, you are not alone. Support is available to help you manage your feelings.Even though your symptoms are mild, it is important to prioritize your mental health. Self-care, supportive connections, and professional guidance can all contribute to your well-being.Your mental health journey is unique, and there is no one-size-fits-all approach. Explore resources on SoulSync and reach out if you need help. We are here to support you every step of the way.Wishing you strength and resilience on your path to well-being.                                                                 Warm regards,                                                                                                                         The SoulSync Team 🌻</p>';
+        break;
+      case 'Moderate depression':
+        resultElement.innerHTML += '<p class = "result">🌟 Thank you for bravely sharing your journey with us! Based on your SoulSync assessment, it seems you are experiencing moderate depression symptoms. Remember, you are not alone! Seeking support from a mental health professional is key. Plus, integrating self-care practices like exercise, mindfulness, and connecting with loved ones can make a big difference. We are here for you every step of the way! 💖 - The SoulSync Team 🌻</p>';
+        break;
+      case 'Moderately severe depression':
+        resultElement.innerHTML += '<p class = "result">🌟 Thank you for completing the SoulSync depression assessment. We are here to support you through this challenging time. Based on your responses, it seems you are experiencing moderate to severe depression symptoms. Remember, you are not alone. Seeking help from a mental health professional is crucial for your healing journey. We are here for you every step of the way. 💖                                                                                                              - The SoulSync Team 🌻</p>';
+        break;
+      case 'Severe depression':
+        resultElement.innerHTML += '<p class = "result">🌟 Thank you for completing the SoulSync depression assessment. We are here to support you. Based on your responses, it seems you are experiencing severe depression symptoms. Remember, you are not alone. Seeking help from a mental health professional is vital. We are here for you every step of the way. 💖                                                   - The SoulSync Team 🌻</p>';
+        break;
+      default:
+        resultElement.innerHTML += '<p>Unable to determine depression severity. Please consult with a healthcare professional for an accurate assessment.</p>';
+    }
+  }
+</script>
+</body>
+</html>
