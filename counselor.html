@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("diary template 2.png");
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .heading {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* Add background color with opacity */
+            z-index: 1000; /* Set z-index to appear above other elements */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            padding: 10px 0; /* Add padding for spacing */
+        }
+
+        .container {
+            position: relative;
+            margin: 50px auto 20px; /* Adjust the margin to push the avatars below the heading */
+            width: calc(20% - 40px); /* Adjust the width to fit one column with margin */
+            flex: 0 0 calc(20% - 40px); /* Adjust flex basis for one column */
+        }
+
+        .avatar {
+            width: 100%; /* Adjust the width to fill the container */
+            height: auto;
+            transition: transform 0.5s ease;
+            border-radius: 100%;
+        }
+
+        .details {
+            position: absolute;
+            top: 100%; /* Change position to below the avatar */
+            left: 0; /* Align with the left edge of the avatar */
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            width: 250px; /* Adjust width to fit content */
+            visibility: hidden;
+            transition: top 0.5s ease; /* Add transition effect */
+            z-index: 1; /* Ensure the text box appears above the avatar */
+        }
+
+        .container:hover .details {
+            top: calc(100% + 10px); /* Move the text box downward */
+            visibility: visible;
+            z-index: 1; /* Ensure the text box appears above the avatar */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">COUNCELLERS</h1>
+    <div class="container">
+        <img class="avatar" src="avatar female.png" alt="avatar image">
+        <span class="details">
+            Name: Neha Patel<br>
+            Age: 28<br>
+            Credentials: Licensed Professional Counselor (LPC)<br>
+            Specialization: Relationship Counseling, Stress Management<br>
+            Availability: Monday to Saturday, 10 AM - 6 PM<br>
+            Languages: English, Gujarati<br>
+            Email: neha.patel@example.com<br>
+            Phone number: +91 9876543211
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="avatar.jpg" alt="avatar image">
+        <span class="details">
+            Name: Priya Sharma<br>
+            Age: 32<br>
+            Credentials: Licensed Professional Counselor (LPC)<br>
+            Specialization: Depression, Anxiety, Trauma<br>
+            Availability: Monday to Friday, 9 AM - 5 PM<br>
+            Languages: English, Hindi<br>
+            Email: priya.sharma@example.com<br>
+            Phone number: +91 9876543210
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="avatar3.jpg" alt="avatar image">
+        <span class="details">
+            Name: Aarav Patel<br>
+            Age: 36<br>
+            Credentials: Licensed Professional Counselor (LPC)<br>
+            Specialization: Anxiety Disorders, Career Counseling, Family Therapy<br>
+            Availability: Tuesday to Saturday, 11 AM to 7 PM<br>
+            Languages: English, Gujarati<br>
+            Email: aarav.patel@example.com<br>
+            Phone number: +91 98765 98765<br>
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="avatar5.jpg" alt="avatar image">
+        <span class="details">
+            <br>Name: Naina Gupta
+            <br>Age: 37
+            <br>Credentials: Licensed Professional Counselor (LPC)
+            <br>Specialization: Anxiety Disorders, Stress Management, Relationship Counseling
+            <br>Availability: Monday to Friday, 9 AM to 5 PM
+            <br>Languages: English, Hindi
+            <br>Email: naina.gupta@example.com
+            <br>Phone number: +91 98765 12345
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="avatar4.jpg" alt="avatar image">
+        <span class="details">
+            Name: Rajesh Singh <br>
+            Age: 42<br>
+<br>Credentials: Licensed Professional Counselor (LPC)
+<br>Specialization: Depression, Trauma Recovery, Grief Counseling
+<br>Availability: Monday to Saturday, 10 AM to 6 PM
+<br>Languages: English, Hindi
+<br>Email: rajesh.singh@example.com
+<br>Phone number: +91 98765 67890
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="AVATAR7.jpg" alt="avatar image">
+        <span class="details">
+           <br> Name: Vikram Sharma
+           <br> Age: 39
+           <br> Credentials: Licensed Professional Counselor (LPC)
+           <br> Specialization: Stress Management, Anger Management, Addiction Counseling
+           <br> Availability: Monday to Friday, 9 AM to 6 PM
+           <br> Languages: English, Punjabi
+           <br> Email: vikram.sharma@example.com
+           <br> Phone number: +91 98765 54321
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="AVATAR8.png" alt="avatar image">
+        <span class="details">
+            <br> Name: Rohan Kapoor
+            <br> Age: 40
+            <br>Credentials: Licensed Professional Counselor (LPC)
+            <br>Specialization: Relationship Counseling, Anger Management, Substance Abuse
+            <br>Availability: Monday to Friday, 8 AM to 4 PM
+            <br>Languages: English, Hindi
+            <br>Email: rohan.kapoor@example.com
+            <br>Phone number: +91 98765 24680
+        </span>
+    </div>
+    <div class="container">
+        <img class="avatar" src="avaatar8.jpg" alt="avatar image">
+        <span class="details">
+            Name: Rahul Singh<br>
+            Age: 35<br>
+            Credentials: Licensed Professional Counselor (LPC)<br>
+            Specialization: Addiction Counseling, Anger Management<br>
+            Availability: Monday to Friday, 8 AM - 4 PM<br>
+            Languages: English, Hindi<br>
+            Email: rahul.singh@example.com<br>
+            Phone number: +91 9876543212
+        </span>
+    </div>
+  
+    
+</body>
+</html>
